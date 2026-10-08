@@ -139,3 +139,6 @@ Individually attaching click handlers to thousands of table or list rows uses no
 ### Why declarative properties instead of manual `addEventListener`?
 
 In standard reactive environments, you shouldn't call modern imperative query selectors and `addEventListener` after rendering. Nexus.js handles this declaratively: callback properties are defined alongside elements inside the render configurations. We bind them directly during node initialization in the compilation loop.
+## Contributor tools
+
+Use Node.js 22.18 or later for the Vitest 4 tests and Vite 7 example builds. These are development dependencies; the library runtime has no new Node.js engine restriction. Install dependencies from the committed lockfiles with npm ci.
