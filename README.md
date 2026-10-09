@@ -2,6 +2,11 @@
 
 A lightweight, zero-dependency reactive frontend framework built from scratch in TypeScript.
 
+This repository contains an earlier NexusLite implementation. The newer
+[NexusLite repository](https://github.com/AG064/nexuslite) includes prerendering
+and additional framework tests. Check each repository's API before switching;
+the source and package outputs are separate.
+
 NexusLite is designed with a singular, clear goal: **perfect readability**. A developer can look directly at the framework's core source code and immediately understand how reactive UI rendering, state management, and routing behaves on the web.
 
 ---
@@ -134,3 +139,6 @@ Individually attaching click handlers to thousands of table or list rows uses no
 ### Why declarative properties instead of manual `addEventListener`?
 
 In standard reactive environments, you shouldn't call modern imperative query selectors and `addEventListener` after rendering. Nexus.js handles this declaratively: callback properties are defined alongside elements inside the render configurations. We bind them directly during node initialization in the compilation loop.
+## Contributor tools
+
+Use Node.js 22.18 or later for the Vitest 4 tests and Vite 7 example builds. These are development dependencies; the library runtime has no new Node.js engine restriction. Install dependencies from the committed lockfiles with npm ci.
